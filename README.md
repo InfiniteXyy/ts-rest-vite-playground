@@ -1,3 +1,3 @@
 # test-node
 
-bundle app with node
+build server code with vite

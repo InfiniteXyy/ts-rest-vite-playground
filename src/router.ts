@@ -2,9 +2,9 @@ import { initServer } from '@ts-rest/express';
 import { contract } from './contract';
 import { dbManager } from './model';
 
-const s = initServer();
+const server = initServer();
 
-export const router = s.router(contract, {
+export const router = server.router(contract, {
   getPost: async ({ params: { id } }) => {
     const post = dbManager.find(id) ?? null;
     return { status: 200, body: post };
