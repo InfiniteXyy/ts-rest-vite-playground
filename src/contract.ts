@@ -2,9 +2,9 @@ import { initContract } from '@ts-rest/core';
 import { z } from 'zod';
 
 export const PostSchema = z.object({
-  id: z.string(),
+  id: z.number(),
   title: z.string(),
-  body: z.string(),
+  body: z.string().nullable(),
 });
 
 export const contract = initContract().router({
@@ -18,7 +18,7 @@ export const contract = initContract().router({
   getPost: {
     method: 'GET',
     path: `/posts/:id`,
-    pathParams: z.object({ id: z.string() }),
+    pathParams: z.object({ id: z.string().transform(Number) }),
     responses: { 200: PostSchema.nullable() },
     summary: 'Get a post by id',
   },
