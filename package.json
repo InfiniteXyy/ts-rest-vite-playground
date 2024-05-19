@@ -1,0 +1,26 @@
+{
+  "name": "test-node",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@ts-rest/core": "^3.45.2",
+    "@ts-rest/express": "^3.45.2",
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.5",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.12",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11",
+    "vite-plugin-node": "^3.1.0"
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "packageManager": "pnpm@9.1.1+sha512.14e915759c11f77eac07faba4d019c193ec8637229e62ec99eefb7cf3c3b75c64447882b7c485142451ee3a6b408059cdfb7b7fa0341b975f12d0f7629c71195"
+}
